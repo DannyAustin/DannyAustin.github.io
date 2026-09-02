@@ -322,7 +322,7 @@ const projects: Project[] = [
       "An autonomous AI publishing platform for medical news, built at Matching Donors. A scheduled pipeline pulls sources from PubMed, Semantic Scholar and curated RSS feeds, has an LLM draft a plain-language article with inline citations, then fact-checks every claim against those same sources. Only fully verified articles publish automatically — anything uncertain is held as a draft for editorial review. Ongoing work; the repository is private.",
     techStack: ["Next.js", "TypeScript", "Supabase", "Groq LLM", "Vercel"],
     liveUrl: "https://medresearch-blog.vercel.app",
-    // image: "/screenshots/medresearch-blog.png", // drop your screenshot at public/screenshots/medresearch-blog.png, then uncomment
+    image: "/screenshots/medresearch-blog.png",
   },
   {
     name: "Campus Marketplace",
