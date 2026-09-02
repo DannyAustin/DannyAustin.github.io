@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  /* Default accent — the live value comes from src/site.config.ts
+     (settings.accentColor), injected in layout.tsx. Edit it there. */
+  --color-accent: #2563eb;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  /* Always-white site: keep form controls and scrollbars light too. */
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* ---------------------------------------------------------------------------
+   Page-enter transition — applied by src/app/template.tsx, which remounts on
+   every navigation so the incoming page fades and rises in. */
+
+.animate-page-enter {
+  animation: page-enter 0.35s ease-out both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media print {
+  .animate-page-enter {
+    animation: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Animated background shapes — rendered by src/components/BackgroundShapes.tsx,
+   toggled via settings.animatedBackground in src/site.config.ts. */
+
+.bg-shape {
+  will-change: transform;
+}
+
+.animate-bg-float {
+  animation: bg-float 18s ease-in-out infinite alternate;
+}
+.animate-bg-float-slow {
+  animation: bg-float 26s ease-in-out infinite alternate;
+}
+.animate-bg-drift {
+  animation: bg-drift 24s ease-in-out infinite alternate;
+}
+.animate-bg-drift-slow {
+  animation: bg-drift 34s ease-in-out infinite alternate;
+}
+.animate-bg-spin {
+  animation: bg-spin 48s linear infinite;
+}
+.animate-bg-spin-slow {
+  animation: bg-spin 72s linear infinite;
+}
+
+@keyframes bg-float {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(24px, -40px, 0) rotate(12deg);
+  }
+}
+
+@keyframes bg-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-48px, 32px, 0) scale(1.08);
+  }
+}
+
+@keyframes bg-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-shape,
+  .animate-page-enter {
+    animation: none !important;
+  }
+}
