@@ -330,6 +330,7 @@ const projects: Project[] = [
       "A full-stack student marketplace: post items for sale with a photo, browse with server-side search, category, condition and price filters, then check out from a cart. Checkout claims each item with a single conditional MongoDB update, so the same item can never be sold to two buyers.",
     techStack: ["React", "Go", "MongoDB", "JWT", "React Router"],
     repoUrl: "https://github.com/DannyAustin/campus-marketplace",
+    liveUrl: "https://campus-marketplace-opal-pi.vercel.app",
     image: "/screenshots/campus-marketplace.png",
   },
   {
@@ -375,7 +376,8 @@ const certifications: Certification[] = [
 const publications: Publication[] = [
   {
     title: "Image Forgery Detection Using Deep Neural Network",
-    venue: "IRJET (International Research Journal of Engineering and Technology)",
+    venue:
+      "IRJET (International Research Journal of Engineering and Technology)",
     // date: "Jun 2023", // add if you want the date shown
     url: "https://www.irjet.net/archives/V10/i6/IRJET-V10I6167.pdf",
   },
