@@ -183,7 +183,7 @@ const resume: Resume = {
   // resumePdf: "/resume.pdf", // (sample) drop your PDF at public/resume.pdf, then uncomment
   contact: {
     email: "dannyaustin891@gmail.com",
-    location: "Tampa, FL",
+    location: "United States",
     githubUrl: "https://github.com/DannyAustin",
     linkedinUrl: "https://www.linkedin.com/in/dannyaustinb",
   },
